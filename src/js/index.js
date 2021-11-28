@@ -20,7 +20,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 async function submitForm(e) {
   e.preventDefault();
 
-  apiService.data = e.currentTarget.elements.searchQuery.value;
+  apiService.data = e.currentTarget.elements.searchQuery.value.trim();
   if (apiService.data === '') {
     return Notiflix.Notify.warning('Enter your search query,please!');
   }
