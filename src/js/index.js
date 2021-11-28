@@ -20,8 +20,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 async function submitForm(e) {
   e.preventDefault();
   apiService.data = e.currentTarget.elements.searchQuery.value;
-  await onShowButtonLoad();
-  refs.buttonLoad.disabled = true;
+  onCloseButtonLoad();
   apiService.resetPage();
   apiService
     .getImages()
