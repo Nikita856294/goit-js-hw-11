@@ -33,6 +33,7 @@ async function submitForm(e) {
     })
     .catch(error => console.log(error));
   clearGallery();
+  refs.form.reset();
 }
 async function onClickButtonLoad(images) {
   apiService.incrementPage();
